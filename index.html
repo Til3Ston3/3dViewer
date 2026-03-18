@@ -1,33 +1,6 @@
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>3D Viewer</title>
-  <style>
-    html, body { width: 100%; height: 100%; margin: 0; }
-    babylon-viewer { width: 100%; height: calc(100% - 50px); display: block; }
-    #bar { height: 50px; padding: 10px; box-sizing: border-box; background: #eee; }
-  </style>
-</head>
-<body>
-  <div id="bar">
-    <select id="modelSelect">
-      <option value="3d View.glb">3d</option>
-      <option value="island.glb">Island</option>
-      <option value="bathroom.glb">Bathroom</option>
-    </select>
-  </div>
-
-  <script type="module" src="https://cdn.jsdelivr.net/npm/@babylonjs/viewer/dist/babylon-viewer.esm.min.js"></script>
-  <babylon-viewer id="viewer" source="./kitchen.glb" environment="auto"></babylon-viewer>
-
-  <script>
-    const viewer = document.getElementById("viewer");
-    const select = document.getElementById("modelSelect");
-
-    select.addEventListener("change", () => {
-      viewer.setAttribute("source", "./" + select.value);
-    });
-  </script>
-</body>
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>GitHub Pages works</h1>
+  </body>
 </html>
