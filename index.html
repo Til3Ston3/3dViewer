@@ -10,6 +10,7 @@
   </style>
 </head>
 <body>
+
   <div id="bar">
     <select id="modelSelect">
       <option value="3d View.glb">3d</option>
@@ -19,15 +20,21 @@
   </div>
 
   <script type="module" src="https://cdn.jsdelivr.net/npm/@babylonjs/viewer/dist/babylon-viewer.esm.min.js"></script>
-  <babylon-viewer id="viewer" source="./kitchen.glb" environment="auto"></babylon-viewer>
+
+  <babylon-viewer id="viewer" environment="auto"></babylon-viewer>
 
   <script>
     const viewer = document.getElementById("viewer");
     const select = document.getElementById("modelSelect");
 
-    select.addEventListener("change", () => {
-      viewer.setAttribute("source", "./" + select.value);
-    });
+    function loadModel() {
+      const file = select.value;
+      viewer.setAttribute("source", "./" + file);
+    }
+
+    loadModel();
+    select.addEventListener("change", loadModel);
   </script>
+
 </body>
 </html>
